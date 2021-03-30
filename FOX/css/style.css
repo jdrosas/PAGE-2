@@ -150,3 +150,52 @@ h3 {
     text-align: center;
     line-height: 3.5rem;
 }
+
+/* Graficos */
+.grafico {
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1 / 3;
+}
+.grafico--motocross {
+    grid-row: 2 / 3;
+    background-image: url(../img/banner/1.jpg);
+}
+.grafico--moto {
+    background-image: url(../img/banner/2.jpg);
+    grid-row: 8 / 9;
+}
+@media (min-width: 768px) {
+    .grafico--moto {
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
+}
+
+/* Noticias */
+.noticias {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+@media (min-width: 768px) {
+    .noticias {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        text-align: center;
+    }
+}
+@media (min-width: 768px) {
+    .noticias__atencion {
+        grid-column: 1 / 3;
+    }
+}
+.noticias__imagen {
+    grid-row: 1 / 2;
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .noticias__imagen {
+        grid-column: 2 / 3;
+    }
+}

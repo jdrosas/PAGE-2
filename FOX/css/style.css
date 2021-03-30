@@ -34,7 +34,7 @@ a {
     text-decoration: none;
 }
 img {
-    max-width: 100%;
+    width: 100%;
 }
 .contenedor {
     max-width: 120rem;
@@ -126,15 +126,6 @@ h3 {
     padding: 1rem;
 }
 
-.producto__imagen {
-    width: 100%;
-
-}
-
-.producto__informacion {
-
-}
-
 .producto__nombre {
     font-size: 4rem;
 }
@@ -192,7 +183,6 @@ h3 {
 }
 .noticias__imagen {
     grid-row: 1 / 2;
-    width: 100%;
 }
 @media (min-width: 768px) {
     .noticias__imagen {
@@ -219,4 +209,39 @@ h3 {
 
 .bloque__titulo {
     margin: 0;
+}
+
+/* Pagina del producto */
+@media (min-width: 768px) {
+    .prenda {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 250px;
+    gap: 2rem;
+}
+.formulario__campo {
+    border: .5rem solid var(--secundario);
+    font-size: 2rem;
+    padding: 1rem;
+    appearance: none;
+}
+.formulario__submit {
+    background-color: var(--rojo);
+    color: var(--primario);
+    border: none;
+    font-size: 2rem;
+    padding: 2rem;
+    transition: background-color .3s ease;
+    grid-column: 1 / 3;
+}
+.formulario__submit--activo, .formulario__submit:hover {
+    color: var(--secundario);
+    cursor: pointer;
+    background-color: var(--rojo_oscuro);
 }
